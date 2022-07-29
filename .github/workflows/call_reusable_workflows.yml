@@ -1,0 +1,14 @@
+# https://docs.github.com/en/actions/using-workflows/reusing-workflows
+
+name: 'Execute Reusables'
+on:
+  workflow_dispatch:
+jobs:
+  call-workflow:
+    uses: laurencee/GithubActionTesting/.github/workflows/workflow_a.yml@main
+
+  call-workflow:
+    uses: laurencee/GithubActionTesting/.github/workflows/dotnet.yml@main
+
+  call-workflow:
+    uses: laurencee/GithubActionTesting/.github/workflows/workflow_a.yml@main
