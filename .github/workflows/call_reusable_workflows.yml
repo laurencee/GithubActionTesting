@@ -1,6 +1,6 @@
 # https://docs.github.com/en/actions/using-workflows/reusing-workflows
-
 name: 'Execute Reusables'
+
 on:
   workflow_dispatch:
 jobs:
