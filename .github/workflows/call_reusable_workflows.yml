@@ -1,11 +1,10 @@
-# https://docs.github.com/en/actions/using-workflows/reusing-workflows
 name: 'Execute Reusables'
-
+# https://docs.github.com/en/actions/using-workflows/reusing-workflows
 on:
   workflow_dispatch:
 jobs:
   call-workflow-a:
-    uses: ./.github/workflows/workflow_a.yml@main
+    uses: ./.github/workflows/workflow_a.yml
   call-workflow-dotnet:
     uses: ./.github/workflows/dotnet.yml
   call-workflow-b:
