@@ -1,0 +1,11 @@
+name: Workflow B
+on:
+  workflow_call:
+jobs:
+  build:
+    name: Workflow B
+    runs-on: ubuntu-latest
+
+    steps:
+    - run: echo Workflow B
+      shell: bash
