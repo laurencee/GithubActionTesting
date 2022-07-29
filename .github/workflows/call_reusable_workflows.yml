@@ -4,11 +4,9 @@ name: 'Execute Reusables'
 on:
   workflow_dispatch:
 jobs:
-  call-workflow:
-    uses: laurencee/GithubActionTesting/.github/workflows/workflow_a.yml@main
-
-  call-workflow:
-    uses: laurencee/GithubActionTesting/.github/workflows/dotnet.yml@main
-
-  call-workflow:
-    uses: laurencee/GithubActionTesting/.github/workflows/workflow_a.yml@main
+  call-workflow-a:
+    uses: ./.github/workflows/workflow_a.yml@main
+  call-workflow-dotnet:
+    uses: ./.github/workflows/dotnet.yml
+  call-workflow-b:
+    uses: ./.github/workflows/workflow_a.yml
