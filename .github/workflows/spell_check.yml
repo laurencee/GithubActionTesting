@@ -1,0 +1,15 @@
+name: PR
+on:
+  push:
+    branches:
+      - main
+
+# test with no permissions
+permissions: { }
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: streetsidesoftware/cspell-action@v7
