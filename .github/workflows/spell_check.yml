@@ -1,11 +1,13 @@
 name: PR
-on:
+on:  
+  pull_request:
   push:
     branches:
       - main
 
 # test with no permissions
-permissions: { }
+permissions:
+  contents: none
 
 jobs:
   spellcheck:
