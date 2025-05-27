@@ -18,3 +18,20 @@
     branches: 
       - main
   ```
+
+### CSpell GHA
+
+Apparently this GHA [doesn't require any permissions to function](https://github.com/laurencee/GithubActionTesting/pull/17/files#diff-616593396de2fd1a651a07cd6e58919c62943ce8b34d237b85adbdd4ce2438d1L11) despite what [this issue indicated](https://github.com/streetsidesoftware/cspell-action/issues/712).
+
+For my purposes, it was important to set the following on the CSpell github action if you want it to check your whole repo everytime.
+
+This is particularly useful if you have an existing larger repo and want your initial main builds to highlight issues that you can fix later.
+
+The other surprise was you must set the `use_cspell_files` field or your cspell files input will be ignored.
+
+```yaml
+  - uses: streetsidesoftware/cspell-action@v7
+    with: 
+      incremental_files_only: false
+      use_cspell_files: true
+```
