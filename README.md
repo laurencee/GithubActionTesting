@@ -21,7 +21,7 @@
 
 ### CSpell GHA
 
-Apparently [this GHA](https://github.com/streetsidesoftware/cspell-action) [doesn't require any permissions to function](https://github.com/laurencee/GithubActionTesting/pull/17/files#diff-616593396de2fd1a651a07cd6e58919c62943ce8b34d237b85adbdd4ce2438d1L11) despite what [this issue indicated](https://github.com/streetsidesoftware/cspell-action/issues/712).
+This will actually require some permissions on internal/private repos, as this repo is public there are no specific permissions required.
 
 For my purposes, it was important to set the following on the CSpell github action if you want it to check your whole repo everytime.
 
