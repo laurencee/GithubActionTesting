@@ -7,8 +7,8 @@ on:
       - main
 
 # test with no permissions
-permissions:
-  contents: none
+# https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/controlling-permissions-for-github_token#defining-access-for-the-github_token-permissions
+permissions: {}
 
 jobs:
   spellcheck:
